@@ -3,7 +3,7 @@ Data files to accompany 'Detectability of RSOs in the Near-Moon Environment: Opt
 
 [Detectability of RSOs in the Near-Moon Environment: Optical and Short-wave Infrared](https://arxiv.org) Cooke et al. 2026.
 
-## head_data_filtered_out2.csv
+## head_data_filtered_out2_clean.csv
 Data file containing the per-pointing averaged frame statistics
 
 ### Column names
