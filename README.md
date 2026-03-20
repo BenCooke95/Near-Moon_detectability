@@ -35,3 +35,10 @@ Python code to convert analysis fits to target detectability as a function of lu
 - CMOS_near_moon_detectability_out2.csv: CMOS limiting G-band magnitude as a function of $m_i$, $m_s$ and $n$
 - SWIR_near_moon_detectability_out1.csv: SWIR limiting J-band magnitude as a function of $m_i$, $m_s$ and $r$
 - SWIR_near_moon_detectability_out2.csv: SWIR limiting J-band magnitude as a function of $m_i$, $m_s$ and $n$
+
+#### Column names
+- moon_illum: Moon illumination (%)
+- moon_sep: Moon separation (degrees)
+- target_rate: Relative target rate ($''$/s)
+- n_frames: Number of frames per stack
+- limiting_mag: Limiting magnitude (G/J band for CMOS/SWIR)
