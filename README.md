@@ -30,11 +30,11 @@ Fits and parameters for background statistics as a function of $m_i$ and $m_s$
 ## near_moon_detectability_clean.py
 Python code to convert analysis fits to target detectability as a function of lunar conditions. Produces data and plots providing limiting magnitude of detectable targets for both CMOS and SWIR in two regimes.
 
-### Output files
-- CMOS_near_moon_detectability_out1.csv: CMOS limiting G-band magnitude as a function of $m_i$, $m_s$ and $r$
-- CMOS_near_moon_detectability_out2.csv: CMOS limiting G-band magnitude as a function of $m_i$, $m_s$ and $n$
-- SWIR_near_moon_detectability_out1.csv: SWIR limiting J-band magnitude as a function of $m_i$, $m_s$ and $r$
-- SWIR_near_moon_detectability_out2.csv: SWIR limiting J-band magnitude as a function of $m_i$, $m_s$ and $n$
+### Output files (compressed)
+- CMOS_near_moon_detectability_out1.csv.zip: CMOS limiting G-band magnitude as a function of $m_i$, $m_s$ and $r$
+- CMOS_near_moon_detectability_out2.csv.zip: CMOS limiting G-band magnitude as a function of $m_i$, $m_s$ and $n$
+- SWIR_near_moon_detectability_out1.csv.zip: SWIR limiting J-band magnitude as a function of $m_i$, $m_s$ and $r$
+- SWIR_near_moon_detectability_out2.csv.zip: SWIR limiting J-band magnitude as a function of $m_i$, $m_s$ and $n$
 
 #### Column names
 - moon_illum: Moon illumination (%)
