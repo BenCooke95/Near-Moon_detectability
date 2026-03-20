@@ -1,4 +1,4 @@
-# Near-moon_detectability
+# Near-Moon_detectability
 Data files to accompany 'Detectability of RSOs in the Near-Moon Environment: Optical and Short-wave Infrared' paper. CC-BY-4.0
 
 [Detectability of RSOs in the Near-Moon Environment: Optical and Short-wave Infrared](https://arxiv.org) Cooke et al. 2026.
