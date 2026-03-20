@@ -17,7 +17,7 @@ Data file containing the per-pointing averaged frame statistics
 - bg_rms: Background rms (ADU)
 
 ## Analysis fits
-Fits and parameters for background statostics as a function of $m_i$ and $m_s$
+Fits and parameters for background statistics as a function of $m_i$ and $m_s$
 - CMOS_fit_params.npz: Fit parameters for CMOS $B_{\rm rms}$ as a function of $B_{\rm mean}$ (also includes CMOS G-band zero point)
 - CMOS_bg_mean_rbf_spline.pkl: RBF interpolation fit for CMOS $B_{\rm mean}$ as a function of $m_i$ and $m_s$
 - CMOS_bg_rms_rbf_spline.pkl: RBF interpolation fit for CMOS $B_{\rm rms}$ as a function of $m_i$ and $m_s$
