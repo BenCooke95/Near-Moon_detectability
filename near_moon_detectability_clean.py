@@ -285,7 +285,7 @@ rates = [min(np.linspace(0, 50, 100), key=lambda x:abs(x-myNumber)) for myNumber
 frames = [min(np.linspace(1, 50, 100), key=lambda x:abs(x-myNumber)) for myNumber in frames]
 
 #create 6X4 array of subfigs
-fig, axes = plt.subplots(nrows=6, ncols=4, sharex=True, sharey=True, figsize=(7.5,7*4/3))
+fig, axes = plt.subplots(nrows=6, ncols=4, sharex=True, sharey=True, figsize=(7.75,7*4/3))
 
 #for each subfigure select correct dataframe and colourbar variables
 for i, ax in enumerate(axes.flatten()):
