@@ -321,6 +321,8 @@ for i, ax in enumerate(axes.flatten()):
         b = ax.scatter(df['moon_sep'], df['moon_illum'], c=df['limiting_mag'], s=0.1, cmap=plt.get_cmap(cmap, cmap_steps), vmin=vmin, vmax=vmax)
 
     #set shared x/y labels
+    ax.set_xlim(2.5,15)
+    ax.set_ylim(20,100)
     ax.xaxis.set_inverted(True)
     if i%4==0:
         ax.set_ylabel('$m_i$ (%)')
