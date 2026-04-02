@@ -283,53 +283,42 @@ frames = [50,40,30,20,10,1]
 #find closest values in list of tested r and n values
 rates = [min(np.linspace(0, 50, 100), key=lambda x:abs(x-myNumber)) for myNumber in rates]
 frames = [min(np.linspace(1, 50, 100), key=lambda x:abs(x-myNumber)) for myNumber in frames]
-print(rates)
-print(frames)
 
 #create 6X4 array of subfigs
 fig, axes = plt.subplots(nrows=6, ncols=4, sharex=True, sharey=True, figsize=(7.5,7*4/3))
 
 #for each subfigure select correct dataframe and colourbar variables
 for i, ax in enumerate(axes.flatten()):
-    print(i)
     if i%4==0:
         df = cmos_rate
         vmin, vmax = cmos_vmin, cmos_vmax
         cmap, cmap_steps = cmos_cmap, cmos_cmap_steps
-        print('cmos')
     elif i%4==1:
         df = cmos_frames
         vmin, vmax = cmos_vmin, cmos_vmax
         cmap, cmap_steps = cmos_cmap, cmos_cmap_steps
-        print('cmos')
     elif i%4==2:
         df = swir_rate
         vmin, vmax = swir_vmin, swir_vmax
         cmap, cmap_steps = swir_cmap, swir_cmap_steps
-        print('swir')
     elif i%4==3:
         df = swir_frames
         vmin, vmax = swir_vmin, swir_vmax
         cmap, cmap_steps = swir_cmap, swir_cmap_steps
-        print('swir')
 
     #filter data to relevant cross-section only
     try:
         rate = rates[i//4]
         df = df.loc[(df['target_rate'] == rate)].reset_index(drop=True)
-        print('rate =', rate)
     except:
         frame = frames[i//4]
         df = df.loc[(df['n_frames'] == frame)].reset_index(drop=True)
-        print('frame =', frame)
 
     #plot data
     if i%4<2:
         a = ax.scatter(df['moon_sep'], df['moon_illum'], c=df['limiting_mag'], s=0.1, cmap=plt.get_cmap(cmap, cmap_steps), vmin=vmin, vmax=vmax)
-        print(vmin, vmax)
     else:
         b = ax.scatter(df['moon_sep'], df['moon_illum'], c=df['limiting_mag'], s=0.1, cmap=plt.get_cmap(cmap, cmap_steps), vmin=vmin, vmax=vmax)
-        print(vmin, vmax)
 
     #set shared x/y labels
     ax.xaxis.set_inverted(True)
@@ -343,9 +332,9 @@ for i, ax in enumerate(axes.flatten()):
 
 #adjust subfig spacing to fit colourbars (one for cmos, one for swir)
 fig.subplots_adjust(right=0.75)
-cbar_ax = fig.add_axes([0.8, 0.1, 0.02, 0.8])
+cbar_ax = fig.add_axes([0.8, 0.1, 0.03, 0.8])
 fig.colorbar(a, cax=cbar_ax, label='$M$ ($G$-band)')
-cbar_ax = fig.add_axes([0.9, 0.1, 0.02, 0.8])
+cbar_ax = fig.add_axes([0.9, 0.1, 0.03, 0.8])
 fig.colorbar(b, cax=cbar_ax, label='$M$ ($J$-band)')
 plt.subplots_adjust(left=0.1, right=0.75, top=0.96, bottom=0.06, hspace=0.35, wspace=0.2)
 #save to file
