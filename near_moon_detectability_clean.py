@@ -15,12 +15,12 @@ cams = ['CMOS', 'SWIR']
 #define colourbar variables
 cmos_vmin = 10
 cmos_vmax = 18
-swir_vmin = 10
-swir_vmax = 16
+swir_vmin =  8
+swir_vmax = 15
 cmos_cmap = 'inferno'
 swir_cmap = 'viridis'
 cmos_cmap_steps = 16
-swir_cmap_steps = 12
+swir_cmap_steps = 14
 
 #define arrays in which to store regime one and two data
 df1s=[]
