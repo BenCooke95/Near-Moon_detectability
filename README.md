@@ -11,6 +11,7 @@ Data file containing the per-pointing averaged frame statistics
 - date_idx: Date index from 0 (2025-10-27) to 19 (2025-11-15)
 - time: Time (UTC)
 - cam: Camera used (CMOS or SWIR)
+- X: Average airmass of pointing (assuming $X = \sec(Z)$&#8203;)
 - m_s: Moon separation (deg)
 - m_i: Moon illumnation fraction (%)
 - bg_mean: Background mean (ADU)
